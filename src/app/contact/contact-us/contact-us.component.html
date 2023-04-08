@@ -1,0 +1,83 @@
+<div class="mt-8">
+  <div class="kaushan-font text-5xl heading-style text-center my-3">Frequently Asked Questions</div>
+  <div class="col-12 flex justify-content-center lato-regular f-c-94">
+    Please reach us at wsbprodaccounts@godaddy.com if you cannot find an answer to your question.
+  </div>
+  <div class="grid mt-5">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <p-accordion [multiple]="true" class="w-full">
+        <p-accordionTab header="First Question">
+          <p>
+            Add an answer to this item.
+          </p>
+        </p-accordionTab>
+        <p-accordionTab header="Second Question">
+          <p>
+            Add an answer to this item.
+          </p>
+        </p-accordionTab>
+        <p-accordionTab header="Third Question">
+          <p>
+            Add an answer to this item.
+          </p>
+        </p-accordionTab>
+      </p-accordion>
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+  <div class="widget widget-contact widget-contact-contact-10">
+    <div class="grid contact-bg image-pos grid-h my-5">
+      <div class="col-6 p-0 mt-5 col-offset-3">
+        <div class="kaushan-font text-5xl heading-style text-center my-3 text-white ">Contact us</div>
+        <p-card>
+          <div class="grid">
+            <div class="col-12 text-center lato-regular letter-spacing mb-2">
+              ARE YOU READY TO GET STARTED?
+            </div>
+            <div class="col-12 mt-2 text-center f-c-94">
+              If you have questions about the opportunities available in our programs, feel free to send us a message.
+              We will get back to you as soon as possible.
+            </div>
+            <div class="col-12 text-center lato-regular letter-spacing mt-3 uppercase">
+              Adhesive daycare usa
+            </div>
+            <div class="col-12 text-center lato-regular letter-spacing mt-3 f-c-r">
+              779-955-7456
+            </div>
+            <div class="col-12 text-center lato-regular letter-spacing mt-3 uppercase">
+              hours
+            </div>
+            <div class="col-6 col-offset-3 text-center lato-regular" *ngIf="!showAllDays">
+              <span class="cursor-pointer" (click)="showAllDays=true">
+                {{(weekDay === 0 || weekDay === 6) ? 'Today' : 'Open today'}}
+              </span>
+              <span class="f-c-r hover:text-black-alpha-70 cursor-pointer" (click)="showAllDays=true">
+                {{(weekDay === 0 || weekDay === 6) ? 'Closed' : '09:00 am - 05:00 pm'}}
+                <i class="pi pi-chevron-down expand-icon"></i>
+              </span>
+            </div>
+            <div class="col-4 col-offset-4 lato-regular flex justify-content-center flex-column" *ngIf="showAllDays">
+              <div *ngFor="let day of dayArray; let i = index" (click)="shrinkAllDays(i)">
+                <div [ngClass]="i === 0 ? 'cursor-pointer f-c-r' : ''" class="span-width">
+                  {{day.dayStr}}
+                </div>
+                <div [ngClass]="i === 0 ? 'cursor-pointer f-c-r' : ''" style="display: inline-block">
+                  {{day.timing}} <i class="pi pi-chevron-up expand-icon" *ngIf="i === 0"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-offset-3 text-center lato-regular">
+              <div class="my-2 font-color-27">Monday - Friday: 7:30am - 4:30pm</div>
+              <div class="my-2 font-color-27">Saturday - Sunday: Closed</div>
+            </div>
+            <div class="col-6 col-offset-3 text-center lato-regular mt-3">
+              <p-button label="GET IN TOUCH"></p-button>
+            </div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>

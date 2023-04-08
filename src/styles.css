@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: kaushanScript-reg;
+  src: url("./assets/fonts/KaushanScript-Regular.ttf"); /* IE */
+  src: local('kaushanScript-reg'), url('./assets/fonts/KaushanScript-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: lato-reg;
+  src: url("./assets/fonts/Lato-Regular.ttf");
+  src: local('lato-reg'), url('./assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+/*@font-face {
+  font-family: FontName3;
+  src: url("fontname1.eot"); !* IE *!
+  src: local('FontName3'), url('fontname3.ttf') format('truetype'); !* others *!
+}*/
+
+.kaushan-font {
+  font-family: "kaushanScript-reg", sans-serif;
+}
+
+.lato-regular {
+  font-family: "lato-reg", arial, sans-serif;
+}
+
+.font-gray {
+  color: #797979;
+}
+
+.letter-spacing {
+  letter-spacing: 0.125em;
+}
+
+.heading-style {
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  color: rgb(27, 27, 27);
+}
+
+.sub-text {
+  color: rgb(17, 17, 17);
+  font-weight: 400;
+}
+
+.font-color-27 {
+  color: rgb(27, 27, 27);
+}
+
+.f-c-94 {
+  color: rgb(94, 94, 94);
+}
+
+.f-c-r {
+  color: rgb(156, 106, 89);
+}
+
+.app-bg {
+  background-color: rgb(156, 106, 89);
+}
+
+.footer-h {
+  height: 203px
+}
+
+.hr-w {
+  width: 50px;
+  border-color: rgb(160, 118, 103);
+}
+
+.input-focus-border {
+  color: rgb(71, 71, 71);
+}
+
+.image-pos {
+  background-repeat: no-repeat;
+  background-blend-mode: normal;
+  background-size: auto, cover;
+  background-position: center;
+  position: relative;
+  top: 0;
+  left: 0;
+}

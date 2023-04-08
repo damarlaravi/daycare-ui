@@ -1,0 +1,29 @@
+<div class="mt-8">
+  <div class="kaushan-font text-5xl heading-style text-center my-3">Account sign in</div>
+  <div class="col-12 flex justify-content-center">
+    <div class="col-5">
+      <div class="my-3 f-c-94 text-base text-center">Sign in to your account to access your profile, history, and any
+        private pages you've been granted access to.
+      </div>
+      <div class="my-5">
+        <input pInputText type="text" class="w-full" placeholder="Email"/>
+      </div>
+      <div class="my-5">
+        <input pInputText type="password" class="w-full" placeholder="Password"/>
+      </div>
+      <div class="my-5 lato-regular text-center">
+        <p-button class="uppercase w-full" label="SIGN IN" (onClick)="loginUser()"></p-button>
+      </div>
+      <div class="my-5 lato-regular text-center">
+        <span role="button" class="text-center f-c-r cursor-pointer reset" routerLink="/auth/reset-password">
+          Reset password
+        </span>
+      </div>
+      <div class="my-5 lato-regular text-center">
+        <span class="mr-2">Not a member?</span>
+        <span role="button" class="text-center f-c-r cursor-pointer reset"
+              routerLink="/auth/signup">Create account</span>
+      </div>
+    </div>
+  </div>
+</div>

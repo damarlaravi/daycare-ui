@@ -1,0 +1,66 @@
+@media (min-width: 1280px) and (max-width: 1535px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1280px) and (max-width: 1535px) and (min-resolution: 192dpi) {
+  .main-section {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url(//img1.wsimg.com/isteam/stock/7703/:/cr=t:15.25%25,l:0%25,w:84.75%25,h:84.75%25/rs=w:3070,m);
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .main-section {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url(//img1.wsimg.com/isteam/stock/7703/:/cr=t:15.25%25,l:0%25,w:84.75%25,h:84.75%25/rs=w:1535,m);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .main-section {
+    min-height: 75vh;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1280px) and (max-width: 1535px) and (min-resolution: 192dpi) {
+  .review-background {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.24) 100%), url(//img1.wsimg.com/isteam/stock/7727/:/rs=w:3070,m);
+    aspect-ratio: 4;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .review-background {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.24) 100%), url(//img1.wsimg.com/isteam/stock/7727/:/rs=w:1535,m);
+    aspect-ratio: 4;
+  }
+}
+
+.review-section {
+  background: transparent;
+}
+
+.review-sub-sec {
+  background-color: rgba(22, 22, 22, 0.5);
+}
+
+:host ::ng-deep .p-inputtext {
+  border-radius: 0;
+  background-color: rgb(246, 246, 246);
+}
+
+.attach-svg {
+  position: relative;
+  top: 2px;
+}
+
+:host ::ng-deep .p-button {
+  width: 100%;
+  border-radius: 0;
+  background-color: rgb(156, 106, 89);
+  color: rgb(0, 0, 0);
+  border-color: rgb(156, 106, 89);
+  letter-spacing: 0.125em;
+  font-family: lato-reg, sans-serif;
+}
+
+:host ::ng-deep .p-button:hover {
+  background-color: rgb(156, 106, 89);
+  color: rgb(0, 0, 0);
+  border-color: rgb(156, 106, 89);
+}

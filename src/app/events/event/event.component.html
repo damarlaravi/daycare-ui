@@ -1,0 +1,39 @@
+<div class="mt-8">
+  <div class="kaushan-font text-5xl heading-style text-center my-3">Enrollment</div>
+  <div class="col-12 flex justify-content-center">
+    <div class="text-center lato-regular col-6">
+      <div class="p-3 enrollment-sub-sec">
+        <span class="">Files coming soon.</span>
+      </div>
+    </div>
+  </div>
+  <div class="widget widget-introduction widget-introduction-introduction-5">
+    <div class="col-12 my-3 p-0">
+      <div>
+        <div class="event-badge image-pos badge-h"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 mt-3">
+    <div class="kaushan-font text-5xl heading-style text-center my-3">Sign up for a Course</div>
+    <div class="text-center text-red-500 my-3">Sorry, something went wrong. Please try again later.</div>
+  </div>
+  <div class="col-12 mt-6">
+    <div class="kaushan-font text-5xl heading-style text-center my-3">Events</div>
+    <div class="col-12 flex flex-column align-items-center">
+      <div class="col-10 flex justify-content-evenly my-3 grid" *ngFor="let event of events">
+        <div class="col-2">
+          <div class="kaushan-font text-4xl f-c-r">{{event.day}}</div>
+        </div>
+        <div class="col-5 flex flex-column lato-regular">
+          <div class="uppercase font-color-27 letter-spacing">{{event.type}}</div>
+          <div class="f-c-94 mt-3 font-normal">{{event.description}}</div>
+        </div>
+        <div class="col-3 flex flex-column lato-regular text-right">
+          <div class="font-color-27 letter-spacing">{{event.timing}}</div>
+          <div class="f-c-94 mt-3 font-normal">{{event.location}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

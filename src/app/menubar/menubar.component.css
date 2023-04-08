@@ -1,0 +1,66 @@
+
+.logo-head {
+  font-size: 34px;
+  color: rgb(186, 137, 119);
+  font-family: "kaushanScript-reg", sans-serif;
+}
+
+.phone-number {
+  font-size: 23px;
+  color: rgb(27, 27, 27);
+  font-family: "kaushanScript-reg", sans-serif;
+}
+
+.vl {
+  margin: 3px;
+  border-left: 2px solid #575454;
+  height: 27px;
+}
+
+
+:host ::ng-deep .p-menubar {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.9;
+  /*backdrop-filter: blur(8px);*/
+  padding: 0.5rem 2rem;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-end {
+  margin-left: inherit;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.vl-top {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.user-icon {
+  color: rgb(156, 106, 89);
+  cursor: pointer;
+}
+
+.user-icon:hover {
+  color: rgb(17, 17, 17);
+}
+
+.sub-text {
+  color: rgb(17, 17, 17);
+  font-weight: 400;
+}
+
+:host ::ng-deep .ng-trigger.ng-trigger-overlayAnimation.p-menu {
+
+
+}

@@ -1,0 +1,14 @@
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+    <label class="logo-head">Adhesive daycare usa</label>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <label class="phone-number">779-955-7456</label>
+    <div class="vl-top">
+      <div class="vl"></div>
+    </div>
+    <i class="pi pi-user user-icon" style="font-size: 1.5rem; margin-top: 3px" (click)="menu.toggle($event)"></i>
+  </ng-template>
+</p-menubar>
+
+<p-menu [model]="menuItems" [popup]="true" #menu></p-menu>
