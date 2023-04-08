@@ -12,8 +12,8 @@
 }
 
 .grid-h {
-  min-height: 898px;
-  max-height: 1000px;
+  min-height: 45.875rem;
+  max-height: 50rem;
 }
 
 .expand-icon {
@@ -60,4 +60,18 @@
   position: absolute;
   background-color: transparent;
   content: "";
+}
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+  padding: 1rem 1rem 0 1rem;
+}
+
+:host ::ng-deep .p-inputtext {
+  background-color: rgb(246, 246, 246);
+  border-radius: 0;
+}
+
+:host ::ng-deep .p-inputtext:focus {
+  border-color: rgb(71, 71, 71);
+  box-shadow: none;
 }

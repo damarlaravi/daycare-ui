@@ -28,56 +28,89 @@
   </div>
 
   <div class="widget widget-contact widget-contact-contact-10">
-    <div class="grid contact-bg image-pos grid-h my-5">
+    <div class="grid contact-bg image-pos grid-h m5-5">
       <div class="col-6 p-0 mt-5 col-offset-3">
         <div class="kaushan-font text-5xl heading-style text-center my-3 text-white ">Contact us</div>
-        <p-card>
-          <div class="grid">
-            <div class="col-12 text-center lato-regular letter-spacing mb-2">
-              ARE YOU READY TO GET STARTED?
-            </div>
-            <div class="col-12 mt-2 text-center f-c-94">
-              If you have questions about the opportunities available in our programs, feel free to send us a message.
-              We will get back to you as soon as possible.
-            </div>
-            <div class="col-12 text-center lato-regular letter-spacing mt-3 uppercase">
-              Adhesive daycare usa
-            </div>
-            <div class="col-12 text-center lato-regular letter-spacing mt-3 f-c-r">
-              779-955-7456
-            </div>
-            <div class="col-12 text-center lato-regular letter-spacing mt-3 uppercase">
-              hours
-            </div>
-            <div class="col-6 col-offset-3 text-center lato-regular" *ngIf="!showAllDays">
+        <div class="col-12 mt-3">
+          <p-card>
+            <div class="grid">
+              <div class="col-12 text-center lato-regular letter-spacing mb-4">
+                ARE YOU READY TO GET STARTED?
+              </div>
+              <div class="col-12 mt-2 text-center f-c-94">
+                If you have questions about the opportunities available in our programs, feel free to send us a message.
+                We will get back to you as soon as possible.
+              </div>
+              <div class="col-12 text-center lato-regular letter-spacing mt-3 uppercase">
+                Adhesive daycare usa
+              </div>
+              <div class="col-12 text-center lato-regular letter-spacing mt-3 f-c-r">
+                779-955-7456
+              </div>
+              <div class="col-12 text-center lato-regular letter-spacing mt-3 uppercase">
+                hours
+              </div>
+              <div class="col-6 col-offset-3 text-center lato-regular" *ngIf="!showAllDays">
               <span class="cursor-pointer" (click)="showAllDays=true">
                 {{(weekDay === 0 || weekDay === 6) ? 'Today' : 'Open today'}}
               </span>
-              <span class="f-c-r hover:text-black-alpha-70 cursor-pointer" (click)="showAllDays=true">
+                <span class="f-c-r hover:text-black-alpha-70 cursor-pointer" (click)="showAllDays=true">
                 {{(weekDay === 0 || weekDay === 6) ? 'Closed' : '09:00 am - 05:00 pm'}}
-                <i class="pi pi-chevron-down expand-icon"></i>
+                  <i class="pi pi-chevron-down expand-icon"></i>
               </span>
-            </div>
-            <div class="col-4 col-offset-4 lato-regular flex justify-content-center flex-column" *ngIf="showAllDays">
-              <div *ngFor="let day of dayArray; let i = index" (click)="shrinkAllDays(i)">
-                <div [ngClass]="i === 0 ? 'cursor-pointer f-c-r' : ''" class="span-width">
-                  {{day.dayStr}}
-                </div>
-                <div [ngClass]="i === 0 ? 'cursor-pointer f-c-r' : ''" style="display: inline-block">
-                  {{day.timing}} <i class="pi pi-chevron-up expand-icon" *ngIf="i === 0"></i>
+              </div>
+              <div class="col-4 col-offset-4 lato-regular flex justify-content-center flex-column" *ngIf="showAllDays">
+                <div *ngFor="let day of dayArray; let i = index" (click)="shrinkAllDays(i)">
+                  <div [class]="day.className">{{day.dayStr}}</div>
+                  <div [ngClass]="i === 0 ? 'cursor-pointer f-c-r' : ''" style="display: inline-block">
+                    {{day.timing}} <i class="pi pi-chevron-up expand-icon" *ngIf="i === 0"></i>
+                  </div>
                 </div>
               </div>
+              <div class="col-6 col-offset-3 text-center lato-regular">
+                <div class="my-2 font-color-27">Monday - Friday: 7:30am - 4:30pm</div>
+                <div class="my-2 font-color-27">Saturday - Sunday: Closed</div>
+              </div>
+              <div class="col-6 col-offset-3 text-center lato-regular mt-3">
+                <p-button label="GET IN TOUCH" (onClick)="canShowGetInTouchDialog = true"></p-button>
+              </div>
             </div>
-            <div class="col-6 col-offset-3 text-center lato-regular">
-              <div class="my-2 font-color-27">Monday - Friday: 7:30am - 4:30pm</div>
-              <div class="my-2 font-color-27">Saturday - Sunday: Closed</div>
-            </div>
-            <div class="col-6 col-offset-3 text-center lato-regular mt-3">
-              <p-button label="GET IN TOUCH"></p-button>
-            </div>
-          </div>
-        </p-card>
+          </p-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="widget widget-contact widget-subscribe-subscribe-10 my-5">
+    <div class="grid p-4 align-items-center justify-content-center">
+      <div class="kaushan-font text-5xl heading-style f-c-r col-3 text-right mr-3">Subscribe</div>
+      <div class="col-4">
+        <input pInputText placeholder="Email Address" class="w-full">
+      </div>
+      <div class="col-2">
+        <p-button label="SIGN UP" class="col-2"></p-button>
       </div>
     </div>
   </div>
 </div>
+
+
+<p-dialog [(visible)]="canShowGetInTouchDialog" (close)="canShowGetInTouchDialog = false"
+          [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [modal]="true"
+          [draggable]="false" [resizable]="false" (onHide)="canShowGetInTouchDialog = false">
+
+  <div class="grid mx-3">
+    <div class="col-12 lato-regular letter-spacing uppercase text-center">GET IN TOUCH!</div>
+    <div class="col-12 py-3">
+      <input pInputText placeholder="Name" class="w-full">
+    </div>
+    <div class="col-12 py-3">
+      <input pInputText placeholder="Email*" class="w-full">
+    </div>
+    <div class="col-12 py-3">
+      <textarea rows="5" cols="30" pInputTextarea class="w-full" placeholder="Message"></textarea>
+    </div>
+    <div class="col-12 flex justify-content-center">
+      <p-button label="SEND" class="text-center" (onClick)="sendFormData()"></p-button>
+    </div>
+  </div>
+</p-dialog>

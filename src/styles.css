@@ -41,6 +41,12 @@ body {
   color: rgb(27, 27, 27);
 }
 
+.bubble-txt-style {
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.4);
+  color: rgb(22, 22, 22);
+  font-size: 2.9375rem;
+}
+
 .sub-text {
   color: rgb(17, 17, 17);
   font-weight: 400;
@@ -55,7 +61,7 @@ body {
 }
 
 .f-c-r {
-  color: rgb(156, 106, 89);
+  color: rgb(156, 106, 89) !important;
 }
 
 .app-bg {
@@ -63,7 +69,7 @@ body {
 }
 
 .footer-h {
-  height: 203px
+  height: 9.375rem;
 }
 
 .hr-w {

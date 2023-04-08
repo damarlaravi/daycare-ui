@@ -5,6 +5,9 @@ import {ContactRouteModule} from "./contact-route.module";
 import {CardModule} from "primeng/card";
 import {AccordionModule} from "primeng/accordion";
 import {ButtonModule} from "primeng/button";
+import {DialogModule} from "primeng/dialog";
+import {InputTextModule} from "primeng/inputtext";
+import {InputTextareaModule} from "primeng/inputtextarea";
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import {ButtonModule} from "primeng/button";
     ButtonModule,
     CommonModule,
     ContactRouteModule,
-    CardModule
+    CardModule,
+    DialogModule,
+    InputTextModule,
+    InputTextareaModule
   ]
 })
 export class ContactModule {

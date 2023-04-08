@@ -10,7 +10,8 @@ export interface Event {
   location: string
 }
 
-export interface DayCareTimings {
+export interface DayCareTiming {
   dayStr: string;
   timing: string;
+  className?: string;
 }

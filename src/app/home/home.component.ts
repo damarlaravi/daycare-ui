@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GalleryImage} from "../app.interface";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,9 @@ import {GalleryImage} from "../app.interface";
 })
 export class HomeComponent implements OnInit {
   public galleryImages: GalleryImage[] = [];
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
     this.galleryImages = [
@@ -39,6 +43,10 @@ export class HomeComponent implements OnInit {
         url: '//img1.wsimg.com/isteam/stock/akKKpGe/:/rs=w:600,cg:true,m'
       }
     ]
+  }
+
+  public signupNav(): void {
+    this.router.navigateByUrl('/event/events')
   }
 
   public attachResumeHandler(e: any): void {
