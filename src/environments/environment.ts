@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  remote_url: 'http://localhost:8080/api/v1/'
+  remote_url: 'https://daycare-service.azurewebsites.net/api/v1/'
 };
 
 /*
