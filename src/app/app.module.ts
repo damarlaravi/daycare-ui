@@ -14,6 +14,10 @@ import {NgOptimizedImage} from "@angular/common";
 import {InputTextModule} from "primeng/inputtext";
 import {InputTextareaModule} from "primeng/inputtextarea";
 import {ButtonModule} from "primeng/button";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {NgxSpinnerModule} from "ngx-spinner";
+import {ServiceInterceptor} from "./service/service.interceptor";
+import {DaycareService} from "./service/daycare.service";
 
 @NgModule({
   declarations: [
@@ -32,9 +36,18 @@ import {ButtonModule} from "primeng/button";
     NgOptimizedImage,
     InputTextModule,
     InputTextareaModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule,
+    NgxSpinnerModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ServiceInterceptor,
+      multi: true
+    },
+    DaycareService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'reset-password',
     component: ResetPasswordComponent
+  },
+  {
+    path: 'activate-user',
+    component: ResetPasswordComponent
   }
 ];
 
