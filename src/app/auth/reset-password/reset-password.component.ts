@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ConfirmedValidator} from "../../validators/ConfirmedValidator";
+import {DaycareService} from "../../service/daycare.service";
 
 interface ParamsData {
   token: string;
@@ -24,7 +25,7 @@ export class ResetPasswordComponent implements OnInit {
     confirmPassword: new FormControl('', [Validators.required])
   });
 
-  constructor(private route: ActivatedRoute, private fb: FormBuilder) {
+  constructor(private route: ActivatedRoute, private fb: FormBuilder, private daycareService: DaycareService) {
     this.route.queryParams.subscribe((qParams: any) => {
       console.log('Object(qParams).keys   ', Object.keys(qParams));
       if (Object.keys(qParams).length > 0) {
@@ -51,6 +52,10 @@ export class ResetPasswordComponent implements OnInit {
     this.form.updateValueAndValidity();
     if (this.form.valid) {
       // make api call from here
+      const endpoint: string = this.hasResetPassword ? `auth/reset/${this.params?.email}/${this.params?.token}` : 'auth/activateUser';
+      this.daycareService.post(endpoint, this.form.value).subscribe((res) => {
+        console.log('Response is    ', res);
+      })
     }
   }
 

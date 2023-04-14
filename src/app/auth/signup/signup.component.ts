@@ -22,7 +22,7 @@ export class SignupComponent {
   public createAccount(): void {
     if (this.form.valid) {
       const user: User | null | undefined = this.form.value as User;
-      this.dayCareService.post('signup', user).subscribe(res => {
+      this.dayCareService.post('auth/signup', user).subscribe(res => {
         console.log('Response ', res);
       })
     }

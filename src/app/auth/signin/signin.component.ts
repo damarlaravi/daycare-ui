@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
-import {LoginUser} from "../../app.interface";
 import {DaycareService} from "../../service/daycare.service";
 
 @Component({
@@ -20,7 +19,7 @@ export class SigninComponent {
 
   public loginUser(): void {
     if (this.form.valid) {
-      this.dayCareService.post('signin', this.form.value).subscribe((res: string) => {
+      this.dayCareService.post('auth/signin', this.form.value).subscribe((res: string) => {
         console.log('Login Response is   ', res);
       });
     }
